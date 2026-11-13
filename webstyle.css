@@ -1,0 +1,488 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #1e1e24;
+    color: #fff;
+}
+/* 1. Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #1e1e24;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Main Header & Top Navigation */
+#main-header {
+    background-color: #2a2a35;
+    color: #00adb5;
+    padding: 30px 0;
+    border-bottom: 3px solid #00adb5;
+}
+
+#main-header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+#navbar {
+    background-color: #111116;
+    padding: 15px 0;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar a {
+    color: #eeeeee;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+    color: #00adb5;
+}
+/* Styling for the current page link */
+#navbar a.active {
+    color: #00adb5; /* Matches my premium cyan theme color */
+    border-bottom: 2px solid #00adb5; /* Adds a clean underline tracker */
+    padding-bottom: 5px; /* Gives the underline a little breathing room */
+}
+
+
+/* 3. Image Section (Tightened & Centered) */
+#showcase {
+    padding: 40px 0 10px 0; /* Clean breathing room below the navbar */
+}
+
+#showcase img {
+    width: 100%;
+    max-width: 200px; /* Locks your picture size beautifully small */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 4. Intro Text Styling */
+#home-intro {
+    padding: 10px 0 20px 0; /* Tight, perfect gap directly under the photo */
+}
+
+#home-intro h2 {
+    color: #00adb5;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.lead-text {
+    font-size: 1.15rem;
+    color: #b9b9c3;
+    max-width: 650px;
+    margin: 0 auto 25px auto;
+}
+
+/* 5. Sleek Premium Download Button */
+.cv-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #00adb5;
+    border: 2px solid #00adb5;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+    background-color: #00adb5;
+    color: #111116;
+    transform: translateY(-2px);
+}
+
+/* 6. Grid System For Cards */
+#highlights {
+    padding: 20px 0 60px 0;
+}
+
+.highlights-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    flex: 1;
+    background-color: #2a2a35;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #3f3f50;
+    text-align: left; /* Keeps inside card text reading nicely left-to-right */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card h3 {
+    color: #00adb5;
+    margin-bottom: 12px;
+    font-size: 1.35rem;
+}
+
+.card p {
+    color: #eeeeee;
+    font-size: 0.95rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00adb5;
+}
+
+/* 7. Premium Footer Layout */
+#main-footer {
+    background-color: #111116;
+    color: #777785;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #2a2a35;
+    margin-top: 40px;
+}
+
+/* Activate ultra-smooth, native page cross-fades */
+@view-transition {
+  navigation: auto;
+}
+
+/* Add a global fallback fade-in animation for older browsers */
+body {
+    animation: fadeInPage 0.4s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(4px); /* Subtle lift effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#navbar a, .cv-btn, .btn, .yt-btn, .card, .badge {
+    transition: all 0.25s ease-in-out !important;
+}
+
+
+/* Contact Section Layout */
+#contact-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #2a2a35;
+    border-radius: 8px;
+    border: 1px solid #3f3f50;
+}
+
+#contact-section h1 {
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+#contact-section p {
+    margin-bottom: 25px;
+    color: #b9b9c3;
+}
+
+/* Form Grouping & Inputs */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #eeeeee;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e1e24;
+    border: 1px solid #3f3f50;
+    border-radius: 4px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Input Focus Glow */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00adb5;
+}
+
+/* Clean Custom Submit Button */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #00adb5;
+    color: #111116;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #008c94;
+}
+#contact-section {
+    max-width: 900px; /* Made it wider to fit both sides */
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #2a2a35;
+    border-radius: 8px;
+    border: 1px solid #3f3f50;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-info, .contact-form-wrapper {
+    flex: 1; /* Split evenly 50/50 */
+}
+
+.contact-info h2, .contact-form-wrapper h2 {
+    color: #00adb5;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #b9b9c3;
+    margin-bottom: 20px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #eeeeee;
+}
+.info-list a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.info-list a:hover {
+    color: #00adb5; /* Glows cyan when hovered over! */
+}
+
+
+/* ==========================================================================
+   About Page Layout Styling
+   ========================================================================== */
+
+.page-title {
+    color: #00adb5;
+    font-size: 2.5rem;
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+
+/* Two-column dashboard engine */
+.about-layout {
+    display: flex;
+    gap: 30px;
+    text-align: left;
+    margin-bottom: 60px;
+    padding-top: 40px;
+}
+
+.about-story {
+    flex: 1.6; /* Gives the story text more horizontal weight */
+}
+
+.about-side-tracks {
+    flex: 1; /* Keeps the badges and hobbies box clean and compact */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Reusable custom dashboard card blocks */
+.about-card {
+    background-color: #2a2a35;
+    border: 1px solid #3f3f50;
+    border-radius: 8px;
+    padding: 30px;
+    height: 100%;
+}
+
+.about-card h2 {
+    color: #00adb5;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #3f3f50;
+    padding-bottom: 10px;
+}
+
+.about-story p {
+    color: #eeeeee;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.about-story p:last-child {
+    margin-bottom: 0;
+}
+
+.about-story strong {
+    color: #00adb5;
+}
+
+/* Skill Tags Cloud Styling */
+.badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.badge {
+    background-color: #1e1e24;
+    border: 1px solid #00adb5;
+    color: #00adb5;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background-color: #00adb5;
+    color: #111116;
+}
+
+/* Hobbies Layout Setup */
+.side-intro {
+    color: #b9b9c3;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.hobby-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.hobby-item {
+    background-color: #1e1e24;
+    border: 1px solid #3f3f50;
+    padding: 12px;
+    border-radius: 6px;
+    color: #eeeeee;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-align: center;
+}
+/* Custom YouTube Link Button */
+.yt-btn {
+    display: block;
+    text-align: center;
+    background-color: #ff0000; /* Distinct YouTube Red background */
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.15);
+}
+
+.yt-btn:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Fixes default anchor color styling in case it clashes */
+.about-card a {
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Mobile-Responsive Rules (For Screens Under 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Un-split the layouts and stack them vertically */
+    .about-layout, 
+    .contact-grid, 
+    .highlights-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* 2. Force elements to take up full mobile width */
+    .about-story, 
+    .about-side-tracks, 
+    .contact-info, 
+    .contact-form-wrapper,
+    .card {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+    }
+
+    /* 3. Re-align the navigation items vertically or compactly if needed */
+    #navbar ul {
+        gap: 20px;
+    }
+    
+    #main-header h1 {
+        font-size: 1.8rem; /* Keeps your name text from clipping on tiny screens */
+    }
+
+    /* 4. Fix hobby list layout for 2-column mobile view */
+    .hobby-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
